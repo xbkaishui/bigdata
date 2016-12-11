@@ -10,13 +10,12 @@ import org.mvel2.ast.Function;
 import org.mvel2.compiler.CompiledExpression;
 import org.mvel2.compiler.ExpressionCompiler;
 
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.mvel2.util.CompilerTools.extractAllDeclaredFunctions;
 
 /**
+ * MVEL DOC
+ * http://mvel.documentnode.com/
  * Created by xbkaishui on 16/12/11.
  */
 public class MvelTest {
