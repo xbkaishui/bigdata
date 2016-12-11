@@ -20,6 +20,7 @@ import java.util.Map;
 
 /**
  * https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/client.html
+ * https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/java-docs-bulk.html
  * <p/>
  * Created by xbkaishui on 16/12/11.
  */
