@@ -24,12 +24,21 @@ public class MvelTest {
      */
     public static void testProperty() {
         String exp = "c != null && foo.bar.name == 'dog' && foo.bar.woof";
-        exp = "Math.max(a,b)+c+1.0";
+        exp = "c = Math.max(a,b)+1.0; t= c+ 12;t";
         //        exp ="test != foo && bo.addSomething(trouble) && 1 + 2 / 3 == 1; String bleh = foo; twa = bleh;";
         ParserContext pCtx = ParserContext.create();
         MVEL.analysisCompile(exp, pCtx);
         System.out.println("inputs:\t" + pCtx.getInputs());
         System.out.println("vals:" + pCtx.getVariables());
+
+        Map<String,Object> vars = new HashMap<String, Object>();
+        vars.put("a","11");
+        vars.put("b","2");
+//        vars.put("c","31");
+        System.out.println("before:\t"+vars);
+        Object rs =  MVEL.eval(exp,vars);
+        System.out.println(rs);
+        System.out.println("after:\t"+vars);
     }
 
     public static void testParseExpression() {
